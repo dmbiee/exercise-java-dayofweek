@@ -56,4 +56,17 @@ public class DaysOfTheWeekTest {
 
         assertThat(result, is(equalTo(expected)));
     }
+
+    @Test
+    void testRemoveOneDayFromTheDaysList() {
+
+        List<String> expected = new ArrayList<>(
+                Arrays.asList(
+                        "Tuesday", "Wednesday",
+                        "Thursday", "Friday", "Saturday", "Sunday"));
+
+        daysOfTheWeek.removeOneDayFromTheDaysList("Monday");
+
+        assertThat(daysOfTheWeek.daysList, is(equalTo(expected)));
+    }
 }
