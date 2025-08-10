@@ -18,6 +18,7 @@ public class DaysOfTheWeekTest {
     @BeforeEach
     void initializeClass() {
         daysOfTheWeek = new DaysOfTheWeek();
+        daysOfTheWeek.fillTheList();
     }
 
     @Test
@@ -31,5 +32,28 @@ public class DaysOfTheWeekTest {
         daysOfTheWeek.fillTheList();
 
         assertThat(daysOfTheWeek.daysList, is(equalTo(expected)));
+    }
+
+    @Test
+    void testReturnActualDaysList() {
+
+        List<String> expected = new ArrayList<>(
+                Arrays.asList(
+                        "Monday", "Tuesday", "Wednesday",
+                        "Thursday", "Friday", "Saturday", "Sunday"));
+
+        List<String> result = daysOfTheWeek.returnActualDaysList();
+
+        assertThat(result, is(equalTo(expected)));
+    }
+
+    @Test
+    void testReturnActualDaysListLength() {
+
+        int expected = 7;
+
+        int result = daysOfTheWeek.returnActualDaysListLength();
+
+        assertThat(result, is(equalTo(expected)));
     }
 }
