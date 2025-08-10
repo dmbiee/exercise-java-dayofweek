@@ -63,4 +63,8 @@ public class DaysOfTheWeek {
     public void sortTheDaysList() {
         daysList.sort(Comparator.naturalOrder());
     }
+
+    public void clearTheDaysList() {
+        daysList.clear();
+    }
 }

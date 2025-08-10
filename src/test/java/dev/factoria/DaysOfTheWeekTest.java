@@ -106,4 +106,14 @@ public class DaysOfTheWeekTest {
 
         assertThat(daysOfTheWeek.daysList, is(equalTo(expected)));
     }
+
+    @Test
+    void testClearTheDayList() {
+
+        List<String> expected = new ArrayList<>();
+
+        daysOfTheWeek.clearTheDaysList();
+
+        assertThat(daysOfTheWeek.daysList, is(equalTo(expected)));
+    }
 }
