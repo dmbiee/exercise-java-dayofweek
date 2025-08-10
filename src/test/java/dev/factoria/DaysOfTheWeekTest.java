@@ -69,4 +69,16 @@ public class DaysOfTheWeekTest {
 
         assertThat(daysOfTheWeek.daysList, is(equalTo(expected)));
     }
+
+    @Test
+    void testReturnTheDayFromDayListByIndex() {
+
+        int index = 0;
+
+        String expected = "Monday";
+
+        String result = daysOfTheWeek.returnTheDayFromDaysListByIndex(index);
+
+        assertThat(result, is(equalTo(expected)));
+    }
 }

@@ -10,7 +10,7 @@ import java.util.Arrays;
  * [X] Метод створення списку днів тижня
  * [X] Метод, який повертає дні тижня
  * [X] Метод, який повертає довжину списку
- * [ ] Метод виключення одного дня тижня
+ * [X] Метод виключення одного дня тижня
  * [ ] Метод, який повертає запитуваний день тижня
  * [ ] Метод, який повертає інформацію про те, чи існує запитуваний день у списку
  * [ ] Метод сортування списку днів в алфавітному порядку
@@ -49,5 +49,9 @@ public class DaysOfTheWeek {
 
     public void removeOneDayFromTheDaysList(String day) {
         daysList.remove(day);
+    }
+
+    public String returnTheDayFromDaysListByIndex(int index) {
+        return daysList.get(index);
     }
 }
