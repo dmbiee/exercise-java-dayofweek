@@ -30,6 +30,6 @@ public class DaysOfTheWeekTest {
 
         daysOfTheWeek.fillTheList();
 
-        assertThat(daysOfTheWeek.list, is(equalTo(expected)));
+        assertThat(daysOfTheWeek.daysList, is(equalTo(expected)));
     }
 }
