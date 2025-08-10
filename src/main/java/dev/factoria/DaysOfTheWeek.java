@@ -3,6 +3,7 @@ package dev.factoria;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 
 /*
  * Клас повинен мати такі методи:
@@ -11,9 +12,9 @@ import java.util.Arrays;
  * [X] Метод, який повертає дні тижня
  * [X] Метод, який повертає довжину списку
  * [X] Метод виключення одного дня тижня
- * [ ] Метод, який повертає запитуваний день тижня
- * [ ] Метод, який повертає інформацію про те, чи існує запитуваний день у списку
- * [ ] Метод сортування списку днів в алфавітному порядку
+ * [X] Метод, який повертає запитуваний день тижня
+ * [X] Метод, який повертає інформацію про те, чи існує запитуваний день у списку
+ * [X] Метод сортування списку днів в алфавітному порядку
  * [ ] Метод очищення списку
  *
  * Вимоги:
@@ -53,5 +54,13 @@ public class DaysOfTheWeek {
 
     public String returnTheDayFromDaysListByIndex(int index) {
         return daysList.get(index);
+    }
+
+    public boolean returnIsTheDayIncludeInDaysList(String day) {
+        return daysList.contains(day);
+    }
+
+    public void sortTheDaysList() {
+        daysList.sort(Comparator.naturalOrder());
     }
 }

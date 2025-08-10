@@ -81,4 +81,29 @@ public class DaysOfTheWeekTest {
 
         assertThat(result, is(equalTo(expected)));
     }
+
+    @Test
+    void testIsTheDayIncludeInDaysList() {
+
+        String dayForChecking = "Monday";
+
+        boolean expected = true;
+
+        boolean result = daysOfTheWeek.returnIsTheDayIncludeInDaysList(dayForChecking);
+
+        assertThat(result, is(equalTo(expected)));
+    }
+
+    @Test
+    void testSortTheDaysList() {
+
+        List<String> expected = new ArrayList<>(
+                Arrays.asList(
+                        "Friday", "Monday", "Saturday",
+                        "Sunday", "Thursday", "Tuesday", "Wednesday"));
+
+        daysOfTheWeek.sortTheDaysList();
+
+        assertThat(daysOfTheWeek.daysList, is(equalTo(expected)));
+    }
 }
